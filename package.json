@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.1.1",
+    "@types/material-ui": "^0.21.5",
     "@types/pretty-ms": "^3.2.0",
     "pretty-ms": "^4.0.0",
     "react": "^16.5.2",

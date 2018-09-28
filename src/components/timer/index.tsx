@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import './Timer.css';
-
 import * as prettyMs from 'pretty-ms';
 
 interface State {
@@ -75,16 +74,16 @@ class Timer extends React.Component<{}, State> {
         let resume = (this.state.currentTimeMS != 0 && !this.state.isRunning) ?
         <button onClick={this.startTimer}>Resume</button> : null
 
-      return (
-        <div className="timer">
-          <div className="time-display">
-            {(prettyMs(this.state.currentTimeMS, {keepDecimalsOnWholeSeconds: true}))}
-          </div>
-          {start}
-          {stop}
-          {resume}
-          {reset}
-        </div>
+        return (
+            <div className="timer">
+                <div className="time-display">
+                    {(prettyMs(this.state.currentTimeMS, {keepDecimalsOnWholeSeconds: true}))}
+                </div>
+                {start}
+                {stop}
+                {resume}
+                {reset}
+            </div>
       );
     }
 

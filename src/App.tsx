@@ -1,19 +1,27 @@
 import * as React from 'react';
 import './App.css';
 
-import logo from './logo.svg';
+import Timer from './components/timer';
+import Leaderboard from './components/leaderboard';
+import Result from './components/leaderboard/Result';
 
 class App extends React.Component {
+  
   public render() {
+
+    let results: Array<Result> = [];
+    
+    let result = new Result();
+    result.id = "1";
+    result.name = "Jack";
+    result.time = "8ms";
+
+    results.push(result);
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Timer />
+        <Leaderboard results={results} />
       </div>
     );
   }

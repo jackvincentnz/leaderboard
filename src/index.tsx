@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
-import Timer from './components/timer/Timer';
 import registerServiceWorker from './registerServiceWorker';
+import App from './App';
 
 ReactDOM.render(
-  <Timer/>,
+  <App/>,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
